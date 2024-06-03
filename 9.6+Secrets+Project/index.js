@@ -66,7 +66,7 @@ app.get("/secrets", async (req, res) => {
         [req.user.email]
       );
       console.log(result);
-      const secret = result.rows[0].secret;
+      const secret = result.rows[0].usersecret;
       if (secret) {
         res.render("secrets.ejs", { secret: secret });
       } else {
